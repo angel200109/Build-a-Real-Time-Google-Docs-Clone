@@ -18,9 +18,9 @@ import {
 import { BoldIcon, FileIcon, FileJsonIcon, FilePenIcon, FilePlusIcon, FileTextIcon, GlobeIcon, ItalicIcon, PrinterIcon, Redo2Icon, RemoveFormattingIcon, StrikethroughIcon, TextIcon, TrashIcon, UnderlineIcon, Undo2Icon } from "lucide-react";
 import { BsFilePdf } from "react-icons/bs";
 import { useEditorState } from "@/store/use-editor-store";
-import { OrganizationSwitcher, UserButton } from "@clerk/nextjs";
+import { UserButton } from "@clerk/nextjs";
 import { Avatars } from "./avatars";
-import { Inbox } from "./inbox";
+
 import { Doc } from "../../../../convex/_generated/dataModel";
 import { useMutation } from "convex/react";
 import { api } from "../../../../convex/_generated/api";
@@ -257,13 +257,13 @@ export const Navbar = ({ data }: NavbarProps) => {
             </div>
             <div className="flex gap-3 items-center pl-6 mr-4">
                 <Avatars />
-                <Inbox />
+                {/* <Inbox />
                 <OrganizationSwitcher
                     afterCreateOrganizationUrl="/"
                     afterLeaveOrganizationUrl="/"
                     afterSelectOrganizationUrl="/"
                     afterSelectPersonalUrl="/"
-                />
+                /> */}
                 <UserButton />
             </div>
         </nav >

@@ -16,7 +16,7 @@ export default defineSchema({
     .index("by_organization_id", ["organizationId"])
     // 搜索索引配置
     .searchIndex("search_title", {
-      searchField: "title", //对 title 字段进行全文搜索
+      searchField: "title", // 对 title 字段进行全文搜索
       filterFields: ["ownerId", "organizationId"], // 在搜索时对 ownerId 和 organizationId 进行过滤
     }),
 });

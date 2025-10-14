@@ -26,7 +26,6 @@ const DocumentHome = () => {
           status={status}
         />
       </div>
-
     </div>
   );
 };

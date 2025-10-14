@@ -132,28 +132,43 @@ export const Toolbar = () => {
 
   return (
     <div className="bg-[#F1F4F9] px-2.5 py-0.5 rounded-[24px] min-h-[40px] flex items-center gap-x-0.5 overflow-x-auto">
+      {/* 撤回、重做、打印、 拼写错误 (section[0])*/}
       {sections[0].map((item) => {
         return <ToolbarButton key={item.label} {...item} />;
       })}
       <Separator orientation="vertical" className="h-6 bg-neutral-300" />
+
+      {/* 字体 */}
       <FontFamilyButton />
       <Separator orientation="vertical" className="h-6 bg-neutral-300" />
+
+      {/* 标题 */}
       <HeadingLevelButton />
       <Separator orientation="vertical" className="h-6 bg-neutral-300" />
+
+      {/* 字体大小 */}
       <FontSizeButton />
       <Separator orientation="vertical" className="h-6 bg-neutral-300" />
+
+      {/* 加粗 斜体 下划线 */}
       {sections[1].map((item) => {
         return <ToolbarButton key={item.label} {...item} />;
       })}
+
+      {/* 字体颜色 高光颜色 */}
       <TextColorButton />
       <HighlightColorButton />
       <Separator orientation="vertical" className="h-6 bg-neutral-300" />
+
+      {/* 链接 图片 对齐 列表 行高 section[1]*/}
       <LinkButton />
       <ImageButton />
       <AlignButton />
       <ListButton />
       <LineHeightButton />
       <Separator orientation="vertical" className="h-6 bg-neutral-300" />
+
+      {/* 评论 待办事项 移除格式 section[2]*/}
       {sections[2].map((item) => {
         return <ToolbarButton key={item.label} {...item} />;
       })}

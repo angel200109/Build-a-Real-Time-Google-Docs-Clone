@@ -17,12 +17,11 @@ export async function getUsers() {
   const organizationId = (sessionClaims as { o?: { id: string } })?.o?.id;
   // 如果没有获取到组织 ID，直接抛出错误
   if (!organizationId) {
-    throw new Error("Organization ID is missing");
   }
 
   // 调用 Clerk 的 users.getUserList API, 传入组织 ID，用来获取该组织下的所有用户列表
   const response = await clerk.users.getUserList({
-    organizationId: [organizationId],
+    organizationId: [organizationId] as string[],
   });
 
   // 从返回结果中提取需要的字段

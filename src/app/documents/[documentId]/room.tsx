@@ -29,6 +29,7 @@ export function Room({ children }: { children: ReactNode }) {
         } catch {
             toast.error("Failed to fetch users");
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     // useEffect 确保 fetchUsers 只在组件挂载时执行一次
     useEffect(() => {
